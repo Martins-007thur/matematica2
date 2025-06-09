@@ -5,33 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista com Botões</title>
   <style>
+    /* Resetando margens e preenchimentos para garantir um layout limpo */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Configuração do body */
     body {
       font-family: Arial, sans-serif;
+      height: 100vh; /* Usando 100% da altura da tela */
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      background-color: #f0f0f0; /* Cor de fundo suave */
+      text-align: center; /* Centraliza o conteúdo do body */
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+
+    /* Container para o conteúdo centralizado */
+    .content {
+      display: flex;
+      flex-direction: column; /* Alinha o conteúdo na vertical */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    li {
-      margin: 10px 0;
-    }
+
+    /* Configuração dos botões (aqui aumentando ainda mais o tamanho) */
     button {
-      padding: 8px 16px;
-      margin: 5px;
+      padding: 24px 48px; /* Aumentando o padding */
+      margin: 10px;
       cursor: pointer;
+      border: 4px solid rgba(255, 255, 255, 0.8); /* Borda um pouco mais grossa */
+      border-radius: 16px; /* Aumentando ainda mais o arredondamento das bordas */
+      background-color: rgba(255, 0, 0, 0.3); /* Cor inicial com fundo transparente */
+      color: white;
+      font-weight: bold;
+      font-size: 30px; /* Aumentando o tamanho da fonte */
+      transition: transform 0.3s ease, opacity 0.5s ease;
+      animation: changeColor 3s infinite; /* A animação agora dura 3 segundos */
+      opacity: 0.8;
+    }
+
+    /* Define a animação que alterna entre todas as cores, incluindo vermelho e roxo escuro */
+    @keyframes changeColor {
+      0% {
+        background-color: rgba(255, 0, 0, 0.3); /* Vermelho */
+      }
+      10% {
+        background-color: rgba(0, 255, 0, 0.3); /* Verde */
+      }
+      20% {
+        background-color: rgba(0, 0, 255, 0.3); /* Azul */
+      }
+      30% {
+        background-color: rgba(255, 255, 0, 0.3); /* Amarelo */
+      }
+      40% {
+        background-color: rgba(0, 255, 255, 0.3); /* Ciano */
+      }
+      50% {
+        background-color: rgba(255, 0, 255, 0.3); /* Magenta */
+      }
+      60% {
+        background-color: rgba(255, 165, 0, 0.3); /* Laranja */
+      }
+      70% {
+        background-color: rgba(128, 0, 128, 0.3); /* Roxo */
+      }
+      80% {
+        background-color: rgba(255, 192, 203, 0.3); /* Rosa */
+      }
+      90% {
+        background-color: rgba(139, 0, 0, 0.3); /* Roxo escuro */
+      }
+      100% {
+        background-color: rgba(255, 0, 0, 0.3); /* Retorna para o vermelho */
+      }
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      opacity: 1; /* Aumenta a opacidade ao passar o mouse */
+    }
+
+    button:active {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Lista de Itens com Botões</h1>
-  
-  <ul>
-    <li>
-      Item 1
-      <button onclick="window.open('https://raw.githubusercontent.com/Martins-007thur/matematica2/refs/heads/main/4a9a82e1-0e92-4051-bed7-6283f199d2a4.jpeg')">Botão 1</button>
-      <button onclick="window.open('Botão 2 clicado!')">Botão 2</button>
-    </li>
-
-  
+  <div class="content">
+    <h1>Lista de Itens com Botões</h1>
+    <ul>
+      <li>
+    
+        <button onclick="window.open('https://raw.githubusercontent.com/Martins-007thur/matematica2/refs/heads/main/4a9a82e1-0e92-4051-bed7-6283f199d2a4.jpeg')">Botão 1</button>
+        <button onclick="window.open('https://docs.google.com/document/d/16Yumb2TCvjRYoXc6TQMlwdcvhqNjMzQJa5ZK4lXlwz4/edit?usp=sharing')">Botão 2</button>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
