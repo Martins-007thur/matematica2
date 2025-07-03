@@ -1,47 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alinhamentos - Caminhão e Carro Rebaixado</title>
+    <title>Lista de Disciplinas</title>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .esquerda {
-            text-align: left;
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #d7f0ff, #ffffff);
+            color: #333;
         }
-        .centralizado {
+
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.8em;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #00695c;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li:hover {
+            background-color: #f1f1f1;
+        }
+
+        .icon {
+            margin-right: 12px;
+            width: 24px;
             text-align: center;
         }
-        .direita {
-            text-align: right;
-        }
-        .justificado {
-            text-align: justify;
+
+        .mat { color: #1e88e5; }
+        .port { color: #c2185b; }
+        .edfi { color: #7b1fa2; }
+        .fisi { color: #ff6f00; }
+        .generic { color: #666; }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <p class="esquerda">
-        O caminhão rebaixado e arqueado é uma verdadeira obra-prima da customização pesada. 
-        
-    </p>
+<header>
+    Lista Acadêmica
+</header>
 
-    <p class="centralizado">
-        Já os carros rebaixados conquistaram seu espaço na cultura urbana. 
-        
-    </p>
+<div class="container">
+    <h2>Disciplinas do Semestre</h2>
+    <ul>
+        <li><span class="icon mat"><i class="fas fa-square-root-alt"></i></span>Matemática 2</li>
+        <li><span class="icon mat"><i class="fas fa-square-root-alt"></i></span>Matemática</li>
+        <li><span class="icon edfi"><i class="fas fa-dumbbell"></i></span>Educação Física</li>
+        <li><span class="icon fisi"><i class="fas fa-atom"></i></span>Física</li>
+        <li><span class="icon port"><i class="fas fa-book"></i></span>Português</li>
+        <li><span class="icon port"><i class="fas fa-book"></i></span>Português</li>
+    </ul>
+</div>
 
-    <p class="direita">
-        Embora caminhão rebaixado e carro rebaixado pertençam a mundos diferentes, ambos compartilham a paixão pela personalização extrema. 
-        
-    </p>
-
-    <p class="justificado">
-        O rebaixamento não é apenas uma questão de estética, mas também de comportamento. Para quem gosta de carros rebaixados, é preciso mais do que apenas baixar a suspensão. 
-        Cada detalhe é pensado, desde o ajuste da altura até as rodas e os pneus. O caminhão rebaixado e arqueado, por sua vez, vai além de uma simples modificação visual, 
-        sendo um símbolo de inovação no segmento de veículos pesados. Ambos os veículos, com suas suspensões modificadas, revelam uma cultura de personalização 
-        que vai desde as ruas da cidade até as estradas mais longas, sempre com estilo e performance.
-    </p>
+<footer>
+    &copy; 2025 Lista Acadêmica | Desenvolvido com ❤️ em HTML e CSS
+</footer>
 
 </body>
 </html>
